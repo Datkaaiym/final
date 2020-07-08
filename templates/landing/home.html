@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+    <div class="section-top">
+        <img src="{% static 'img/main_img.jpg' %}" class="img-responsive">
+    </div>
+     
+    <div class="section section1 best_seller">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="text-center">
+                        Бестселлеры
+                    </h1>
+                </div>
+                
+                {% for product_image in products_images %}
+                    {% include 'landing/product_item.html' %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    
+    <!-- <div class="section section-delivery">
+        <div>
+            <h1>Книги, изменившие жизнь</h1>   
+        </div>
+    </div>
+
+    <div class="section section2 new-arrivals-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="text-center">
+                        Новинки
+                    </h1>
+                </div>
+                {% for product_image in products_images_new_arrivals %}
+                    {% include 'landing/product_item.html' %}
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+    
+    <div class="section section3 prize-winners-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="text-center">
+                        Лауреаты Премий
+                    </h1>
+                </div>
+                {% for product_image in products_images_prize_winners %}
+                    {% include 'landing/product_item.html' %}
+                {% endfor %}
+
+            </div>
+        </div>
+    </div> -->
+{% endblock %}
